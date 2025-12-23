@@ -28,8 +28,8 @@ First, install Microsoft VibeVoice:
 git clone https://github.com/microsoft/VibeVoice.git
 cd VibeVoice
 pip install -e .
+python demo/vibevoice_realtime_demo.py --model_path microsoft/VibeVoice-Realtime-0.5B 
 ```
-
 ### Install the plugin
 
 #### From GitHub
