@@ -149,13 +149,10 @@ Stream(ReplyOnPause(voice_chat), mode="send-receive", modality="audio").ui.launc
 
 ```bash
 # Echo bot - repeats what you say
-python -m vibevoice_realtime_fastrtc_plugin.examples.fastrtc_integration echo
+python fastrtc_examples.py echo
 
 # LLM voice chat (requires LM Studio or Ollama)
-python -m vibevoice_realtime_fastrtc_plugin.examples.fastrtc_integration chat
-
-# WebSocket TTS server
-python -m vibevoice_realtime_fastrtc_plugin.examples.fastrtc_integration server
+python fastrtc_examples.py chat
 ```
 
 ## 🎛️ Configuration
@@ -206,11 +203,12 @@ print(tts.get_available_voices())
 ```text
 vibevoice-0.5-realtime-fastrtc-plugin/
 ├── examples/
-│   └── fastrtc_integration.py    # FastRTC example applications
+│   └── fastrtc_integration.py
+    └── fastrtc_examples.py
 ├── src/
 │   └── vibevoice_realtime_fastrtc_plugin/
 │       ├── __init__.py
-│       └── tts.py                # Main TTS wrapper
+│       └── vibevoice_tts.py                # Main TTS wrapper
 ├── LICENSE
 ├── pyproject.toml
 └── README.md
