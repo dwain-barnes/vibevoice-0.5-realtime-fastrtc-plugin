@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vibevoice-0.5-realtime-fastrtc-plugin"
+version = "0.1.0"
+description = "FastRTC-compatible wrapper for Microsoft VibeVoice-Realtime-0.5B TTS"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "FastRTC Community"}
+]
+keywords = ["tts", "text-to-speech", "fastrtc", "vibevoice", "realtime", "streaming"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "numpy>=1.24.0",
+    "torch>=2.0.0",
+    "transformers>=4.40.0",
+    "huggingface-hub>=0.20.0",
+]
+
+[project.optional-dependencies]
+fastrtc = [
+    "fastrtc>=0.0.10",
+    "gradio>=4.0.0",
+]
+vibevoice = [
+    "vibevoice @ git+https://github.com/microsoft/VibeVoice.git",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+all = [
+    "vibevoice-fastrtc[fastrtc,vibevoice,dev]",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/vibevoice-fastrtc"
+Documentation = "https://github.com/your-username/vibevoice-fastrtc#readme"
+Repository = "https://github.com/your-username/vibevoice-fastrtc"
+Issues = "https://github.com/your-username/vibevoice-fastrtc/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"] 
+include = ["vibevoice_fastrtc*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md", "*.txt"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
