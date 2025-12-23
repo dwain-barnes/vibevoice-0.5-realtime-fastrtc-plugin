@@ -8,7 +8,7 @@ A FastRTC-compatible wrapper for Microsoft's **VibeVoice-Realtime-0.5B** text-to
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![FastRTC](https://img.shields.io/badge/FastRTC-compatible-green.svg)](https://fastrtc.org/)
-[![Chat](https://github.com/dwain-barnes/vibevoice-0.5-realtime-fastrtc-plugin/blob/main/example_voice_chat.png)](Chat example)
+[![Chat](https://github.com/dwain-barnes/vibevoice-0.5-realtime-fastrtc-plugin/blob/main/example_voice_chat.png)
 
 ## ✨ Features
 
