@@ -58,6 +58,24 @@ pip install fastrtc[stt]  # Includes speech-to-text support
 pip install sounddevice scipy  # For local audio playback/saving
 ```
 
+### For GPU
+If you already installed a CPU-only build, do this first:
+```bash
+pip3 uninstall -y torch torchvision torchaudio
+```
+CUDA 11.8
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+CUDA 12.x
+```bash
+# CUDA 12.6
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+
+# CUDA 12.8
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+```
+
 ## 🚀 Quick Start
 
 ### Basic TTS
